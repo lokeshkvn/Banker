@@ -1,0 +1,13 @@
+<input type="text"(keyup)="onKeyup($event)">
+<button (click)="getUsers()">search</button>
+<p>
+{{searchCount}}</p>
+<ol *ngIf = "searchResult" layout="row" layout-align="center center">
+  <md-card class="example-card" *ngFor = "let user of searchResult.items">
+  <md-card-header layout="row" layout-align="center center" >
+    <div md-card-avatar class="example-header-image" ></div>
+    <md-card-title  layout="row" layout-align="center center"><a md-raised-button (click) = 'showUserDetails(user)'>{{user.login}}</a></md-card-title>
+  </md-card-header>
+  <img class="profile" md-card-image [src]="user.avatar_url" layout="row" layout-align="center center" >
+</md-card>
+</ol>

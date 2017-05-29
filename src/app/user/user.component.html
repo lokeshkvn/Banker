@@ -1,0 +1,15 @@
+<h1> User Detail</h1>
+<md-card class="example-card">
+    <md-card-title>Name : {{user.name}}</md-card-title>
+    <md-card-subtitle>followers = {{user.followers}}</md-card-subtitle>
+  <img md-card-image [src]="user.avatar_url">
+  <md-card-content>
+    <p>
+      Created at : {{user.created_at | date}}
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>Gist : {{user.public_gists}}</button>
+    <button md-button>Repos : {{user.public_repos}}</button>
+  </md-card-actions>
+</md-card>

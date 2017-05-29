@@ -1,0 +1,12 @@
+.profile{
+    height: 60px;
+    width: 60px;
+    text-align: center;
+}
+
+.example-card{
+    width: 200px;
+    float: left;
+    margin: 5px;
+    text-align: center;
+}
