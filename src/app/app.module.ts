@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { CircularComponent } from './circular/circular.component';
 import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
+import { CoolStorageModule } from 'angular2-cool-storage';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { UserComponent } from './user/user.component';
     HttpModule,
     MaterialModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    CoolStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

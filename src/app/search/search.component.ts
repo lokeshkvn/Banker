@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {GithubService} from '../github/github.service';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
+import { CoolLocalStorage } from 'angular2-cool-storage';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -9,14 +10,18 @@ import {Router} from '@angular/router'
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private router: Router,private githubService: GithubService) { }
+  constructor(localStorage: CoolLocalStorage,private router: Router,private githubService: GithubService) {
+    this.localStorage=localStorage;
+   }
 
  public searchText;
  public searchResult;
  public searchCount;
+ localStorage: CoolLocalStorage;
+ 
+ 
 
   ngOnInit() {
-  
   }
 
 showUserDetails(user){
